@@ -1,8 +1,8 @@
 pipeline {
     agent {
         docker {
-            image 'python:3.10-slim'
-            args '-u root'  // run as root to install extra packages if needed
+            image 'docker:25-dind'
+            args '--user root'  // run as root inside the container
         }
     }
 
