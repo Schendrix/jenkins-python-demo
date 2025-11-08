@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+
     environment {
         APP_NAME = "jenkins-python-demo"
         VENV = ".venv"
@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: "${env.BRANCH_NAME}", url: 'https://github.com/Schendrix/jenkins-python-demo.git'
+                git branch: "main", url: 'https://github.com/Schendrix/jenkins-python-demo.git'
             }
         }
 
