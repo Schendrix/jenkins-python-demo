@@ -1,11 +1,6 @@
 pipeline {
-    agent {
-        docker {
-            image 'docker:25-dind'
-            args '--user root'  // run as root inside the container
-        }
-    }
-
+    agent any
+    
     environment {
         APP_NAME = "jenkins-python-demo"
         VENV = ".venv"
