@@ -1,13 +1,11 @@
-from flask import Flask
+# Simple Python app
 
+def add(a, b):
+    return a + b
 
-app = Flask(__name__)
+def subtract(a, b):
+    return a - b
 
-
-@app.route('/')
-def home():
-    return "Hello from Jenkins CI/CD!"
-
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+if __name__ == "__main__":
+    print("Add 2 + 3 =", add(2, 3))
+    print("Subtract 5 - 2 =", subtract(5, 2))
